@@ -4,7 +4,7 @@ CREATE TABLE "Video" (
     "name" TEXT NOT NULL,
     "path" TEXT NOT NULL,
     "transcription" TEXT,
-    "createcAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 -- CreateTable

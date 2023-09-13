@@ -1,3 +1,6 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -12,7 +15,7 @@ model Video {
   name          String
   path          String
   transcription String?
-  createcAt     DateTime @default(now())
+  createdAt     DateTime @default(now())
 }
 
 model Prompt {

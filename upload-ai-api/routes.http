@@ -8,18 +8,30 @@ POST http://localhost:3333/videos
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="exemple.mp3"
+Content-Disposition: form-data; name="file"; filename="I-E-A-I-A-I-O.mp3"
 Content-Type: audio/mpeg
 
-< ./exemple.mp3
+< ./I-E-A-I-A-I-O.mp3
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 ###
 
 # @name create-transcription
-POST http://localhost:3333/videos/d7497b7a-c07a-4abb-af68-3a14b9053df1/transcription
+POST http://localhost:3333/videos/06785d23-3979-4d6a-8b5d-df68680d824d/transcription
 Content-Type: application/json
 
 {
-    "prompt": "colocar palavras chave"
+    "prompt": "musica , system of a down"
+}
+
+###
+
+# @name generate-ai-completion
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+    "videoId": "06785d23-3979-4d6a-8b5d-df68680d824d",
+    "temperature": 0.5,
+    "template": "Gere um resumo da musica: '''{transcription}''' "
 }
